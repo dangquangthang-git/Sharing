@@ -45,6 +45,7 @@ public class Login extends BaseTest {
         driver.findElement(By.xpath("//input[@id='password']")).clear();
         ExtentManager.getTest().log(Status.INFO, "STEP04: Enter to password textbox");
         driver.findElement(By.xpath("//input[@id='password']")).sendKeys("Dsb@2024");
+        System.out.println("Xong phần nhập account");
         ExtentManager.getTest().log(Status.INFO, "STEP05: Click to login button");
         driver.findElement(By.xpath("//button[@id='btn-login']")).click();
 

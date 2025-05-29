@@ -30,7 +30,6 @@ public class ExtentManager {
         return extentReports;
     }
 
-
     public static synchronized ExtentTest getTest() {
         return extentTestMap.get((int) Thread.currentThread().getId());
     }

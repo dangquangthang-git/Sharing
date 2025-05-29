@@ -17,19 +17,15 @@ public class ExtentListener extends BaseTest implements ITestListener {
 
     @Override
     public void onStart(ITestContext iTestContext) {
-
     }
 
     @Override
     public void onFinish(ITestContext iTestContext) {
-        ExtentManager.extentReports.flush();
+        reportConfigs.ExtentManager.extentReports.flush();
     }
 
     @Override
     public void onTestStart(ITestResult iTestResult) {
-        if (getTest() == null || !getTest().getModel().getName().equals(iTestResult.getMethod().getMethodName())) {
-            ExtentManager.startTest(iTestResult.getMethod().getMethodName(),"Executing test");
-        }
     }
 
 
